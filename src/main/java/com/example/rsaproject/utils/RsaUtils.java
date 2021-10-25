@@ -23,7 +23,7 @@ public class RsaUtils {
         PrivateKey privateKey = pair.getPrivate();
         PublicKey publicKey = pair.getPublic();
         Cipher encryptCipher = Cipher.getInstance("RSA");
-        encryptCipher.init(Cipher.ENCRYPT_MODE, publicKey);
+        encryptCipher.init(Cipher.ENCRYPT_MODE, privateKey);
         byte[] secretMessageBytes = secretMessage.getBytes(StandardCharsets.UTF_8);
         String st= Base64.getEncoder().encodeToString(secretMessageBytes);
         return st;
