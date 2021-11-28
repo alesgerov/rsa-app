@@ -48,6 +48,7 @@ public class MainController {
             cardService.saveCard(value);
             return ResponseEntity.status(201).body(new ResponseForm(0, "Card saved"));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(409).body(new ResponseForm(1, e.getMessage()));
         }
     }
