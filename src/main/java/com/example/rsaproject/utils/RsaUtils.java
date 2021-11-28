@@ -40,14 +40,4 @@ public class RsaUtils {
         return new String(decryptedMessageBytes, StandardCharsets.UTF_8);
     }
 
-//    private PrivateKey getPrivate() throws Exception{
-//        byte[] keyBytes = Files.readAllBytes(Paths.get("D:\\Projects\\Java\\rsa-project\\keys.txt"));
-//
-//        PKCS8EncodedKeySpec spec =
-//                new PKCS8EncodedKeySpec(keyBytes);
-//        KeyFactory kf = KeyFactory.getInstance("RSA");
-//        return kf.generatePrivate(spec);
-//
-//    }
-
 }
